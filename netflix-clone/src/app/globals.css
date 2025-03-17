@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 8%; /* Netflix dark background */
+    --foreground: 0 0% 100%; /* White text */
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 357 92% 47%; /* Netflix red */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 357 92% 47%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 357 92% 47%;
+    --radius: 0.3rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .netflix-button {
+    @apply bg-primary text-white px-5 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors;
+  }
+
+  .netflix-input {
+    @apply bg-transparent border border-[#333] rounded-md p-4 text-white placeholder:text-gray-400 focus:border-white transition-colors;
+  }
+
+  .netflix-gradient {
+    @apply bg-gradient-to-t from-background to-transparent;
+  }
+}
